@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	id="com.stc.VolumePlugin"
+	version="1.0.0">
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0" />
+	</engines>
+
+	<name>Volume Plugin</name>
+
+	<js-module src="www/VolumePlugin.js" name="VolumePlugin">
+		<clobbers target="VolumePlugin" />
+	</js-module>
+
+	<!-- iOS -->
+	<platform name="ios">
+		<config-file target="config.xml" parent="/*">
+			<feature name="VolumePlugin">
+				<param name="ios-package" value="VolumePlugin"/>
+			</feature>
+		</config-file>
+		<header-file src="src/ios/VolumePlugin.h" />
+		<source-file src="src/ios/VolumePlugin.m" />
+
+        <framework src="MediaPlayer.framework" />
+	</platform>
+
+	<!-- Android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="VolumePlugin" >
+				<param name="android-package" value="com.stc.VolumePlugin.VolumePlugin"/>
+			</feature>
+		</config-file>
+		<source-file src="src/android/VolumePlugin.java" target-dir="src/com/stc/VolumePlugin" />
+	</platform>
+</plugin>

@@ -1,0 +1,17 @@
+{
+  "name": "com-stc-volume-plugin",
+  "version": "0.0.1",
+  "description": "Volume Plugin",
+  "repository": {
+    
+  },
+  "keywords": [
+    "volume",
+    "cordova",
+    "ecosystem:cordova"
+  ],
+  "platforms": [
+    "ios"
+  ],
+  "author": "TSU"
+}
